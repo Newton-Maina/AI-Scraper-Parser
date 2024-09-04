@@ -1,5 +1,8 @@
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
+from colorama import Fore, Style, init
+
+init(autoreset=True)
 
 template = (
     "You are tasked with extracting specific information from the following text content: {dom_content}. "
@@ -15,6 +18,7 @@ model = OllamaLLM(model="gemma2:2b")
 def parse_with_ollama(dom_chunks, parse_description):
     prompt = ChatPromptTemplate.from_template(template)
     chain = prompt | model
+    print(f"{Fore.GREEN}Parsing Initialized...")
 
     parsed_results = []
 
@@ -22,7 +26,10 @@ def parse_with_ollama(dom_chunks, parse_description):
         response = chain.invoke(
             {"dom_content": chunk, "parse_description": parse_description}
         )
-        print(f"Parsed batch: {i} of {len(dom_chunks)}")
+        print(f"{Fore.YELLOW}Parsed batch: {i} of {len(dom_chunks)}")
         parsed_results.append(response)
 
+    print(f"{Fore.GREEN}Parsing complete!")
     return "\n".join(parsed_results)
+
+

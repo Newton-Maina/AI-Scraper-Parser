@@ -3,7 +3,7 @@ import streamlit as st
 from scrape import scrape_website, split_dom_content, clean_body_content, extract_body_content
 from parse import parse_with_ollama
 
-st.title("🌐 AI Web Scraper")
+st.title("🌐 AI Multi-Web Scraper")
 st.markdown("Welcome to the AI Web Scraper!")
 st.markdown("Enter a website URL to scrape its content and extract specific information.")
 

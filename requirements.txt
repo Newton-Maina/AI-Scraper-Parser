@@ -1,8 +1,9 @@
-streamlit
-langchain
+streamlit~=1.38.0
+langchain~=0.2.15
 langchain_ollama
-selenium
-beautifulsoup4
-lxml
-html5lib
-python-dotenv
+selenium~=4.24.0
+beautifulsoup4~=4.12.3
+lxml~=5.3.0
+html5lib~=1.1
+langchain-core~=0.2.37
+colorama~=0.4.6
