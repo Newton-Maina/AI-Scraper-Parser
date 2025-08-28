@@ -1,0 +1,6 @@
+/venv
+error_page_1.html
+error_page_1.png
+
+__pycache__/
+*.pyc
