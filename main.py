@@ -4,7 +4,16 @@ from src.parser import parse_with_ollama
 from src.processing import extract_body_content, clean_body_content, split_dom_content
 
 # Streamlit App
+st.set_page_config(page_title="AI Multi-Web Scraper", page_icon="🌐")
 st.title("🌐 AI Multi-Web Scraper")
+
+# Sidebar for global controls
+with st.sidebar:
+    st.header("Controls")
+    if st.button("🧹 Clear Session", help="Reset all data and start over"):
+        st.session_state.clear()
+        st.rerun()
+
 st.markdown("Welcome to the AI Web Scraper!")
 st.markdown("Enter a website URL to scrape its content and extract specific information.")
 
