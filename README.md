@@ -1,5 +1,7 @@
 # AI Web Scraper & Parser
 
+![Project Preview](src/og_image.png)
+
 A powerful, modular web scraping and parsing tool built with Python, Streamlit, Selenium, and LangChain. This application allows you to scrape websites (handling dynamic content and pagination via Bright Data) and parse the extracted data using local LLMs (via Ollama).
 
 ## Features
