@@ -31,5 +31,3 @@ def parse_with_ollama(dom_chunks, parse_description):
 
     print(f"{Fore.GREEN}Parsing complete!")
     return "\n".join(parsed_results)
-
-
